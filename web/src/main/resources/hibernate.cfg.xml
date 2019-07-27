@@ -1,0 +1,30 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <property name = "hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name = "hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+
+        <!-- Assume test is the database name -->
+
+        <property name = "hibernate.connection.url">jdbc:mysql://localhost:3306/yillik?characterEncoding=UTF-8</property>
+        <property name = "hibernate.connection.username">root</property>
+        <property name = "hibernate.connection.password"></property>
+
+        <mapping class="tr.com.nihatalim.yillik.web.models.Admin" />
+        <mapping class="tr.com.nihatalim.yillik.web.models.Article" />
+        <mapping class="tr.com.nihatalim.yillik.web.models.Grade" />
+        <mapping class="tr.com.nihatalim.yillik.web.models.GradeNotification" />
+        <mapping class="tr.com.nihatalim.yillik.web.models.Notification" />
+        <mapping class="tr.com.nihatalim.yillik.web.models.Province" />
+        <mapping class="tr.com.nihatalim.yillik.web.models.School" />
+        <mapping class="tr.com.nihatalim.yillik.web.models.SchoolNotification" />
+        <mapping class="tr.com.nihatalim.yillik.web.models.Season" />
+        <mapping class="tr.com.nihatalim.yillik.web.models.Student" />
+        <mapping class="tr.com.nihatalim.yillik.web.models.StudentNotification" />
+        <mapping class="tr.com.nihatalim.yillik.web.models.User" />
+
+    </session-factory>
+</hibernate-configuration>
