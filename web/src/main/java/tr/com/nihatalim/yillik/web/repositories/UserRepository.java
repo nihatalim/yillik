@@ -10,7 +10,7 @@ public class UserRepository implements IUserRepository{
     private SessionFactory sessionFactory;
 
     public UserRepository() {
-        this.sessionFactory = HibernateUtil.getSessionFactory();
+
     }
 
     @Override

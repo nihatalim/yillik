@@ -20,6 +20,7 @@
         <mapping class="tr.com.nihatalim.yillik.web.models.Notification" />
         <mapping class="tr.com.nihatalim.yillik.web.models.Province" />
         <mapping class="tr.com.nihatalim.yillik.web.models.School" />
+        <mapping class="tr.com.nihatalim.yillik.web.models.Studio" />
         <mapping class="tr.com.nihatalim.yillik.web.models.SchoolNotification" />
         <mapping class="tr.com.nihatalim.yillik.web.models.Season" />
         <mapping class="tr.com.nihatalim.yillik.web.models.Student" />

@@ -1,11 +1,9 @@
 package tr.com.nihatalim.yillik.web.models;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "school_notification")
@@ -14,7 +12,13 @@ import javax.persistence.Table;
 public class SchoolNotification extends BaseModel{
 
     private int SchoolID;
+    @ManyToOne
+    @JoinColumn(foreignKey = @ForeignKey(name = "SchoolID"))
     private School School;
+
     private int NotificationID;
+    @ManyToOne
+    @JoinColumn(foreignKey = @ForeignKey(name = "NotificationID"))
     private Notification Notification;
+
 }
