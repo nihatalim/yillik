@@ -16,12 +16,13 @@ public class Studio extends BaseModel{
     @Column(nullable = false)
     private String Name;
 
-    private int UserID;
     @ManyToOne
-    @JoinColumn(foreignKey = @ForeignKey(name = "UserID"))
     private User User;
 
+    @Column(nullable = false)
     private boolean IsPremium;
+
+    @Column(nullable = false)
     private boolean IsSystemActive;
 
     @OneToMany(mappedBy = "Studio")

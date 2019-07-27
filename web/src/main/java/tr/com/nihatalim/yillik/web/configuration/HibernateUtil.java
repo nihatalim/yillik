@@ -1,4 +1,4 @@
-package tr.com.nihatalim.yillik.web.conf;
+package tr.com.nihatalim.yillik.web.configuration;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

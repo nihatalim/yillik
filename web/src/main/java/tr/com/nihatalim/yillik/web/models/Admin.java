@@ -11,11 +11,10 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class Admin extends BaseModel{
 
+    @Column(nullable = false)
     private String Name;
 
-    private int UserID;
     @ManyToOne
-    @JoinColumn(foreignKey = @ForeignKey(name = "UserID"))
     private User User;
 
 }

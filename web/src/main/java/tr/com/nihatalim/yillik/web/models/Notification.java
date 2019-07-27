@@ -14,20 +14,20 @@ import java.util.Date;
 @NoArgsConstructor
 public class Notification extends BaseModel{
 
+    @Column(nullable = false)
     private String Title;
+
+    @Column(nullable = false)
     private String Body;
 
+    @Column(nullable = false)
     @Temporal(TemporalType.DATE)
     private Date EndDate;
 
-    private int StudioID;
     @ManyToOne
-    @JoinColumn(foreignKey = @ForeignKey(name = "StudioID"))
     private Studio Studio;
 
-    private int SeasonID;
     @ManyToOne
-    @JoinColumn(foreignKey = @ForeignKey(name = "SeasonID"))
     private Season Season;
 
     @OneToMany(mappedBy = "Notification")

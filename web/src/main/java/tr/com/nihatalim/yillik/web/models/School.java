@@ -13,21 +13,16 @@ import java.util.Collection;
 @NoArgsConstructor
 public class School extends BaseModel{
 
+    @Column(nullable = false)
     public String Name;
 
-    public int StudioID;
     @ManyToOne
-    @JoinColumn(foreignKey = @ForeignKey(name = "StudioID"))
     public Studio Studio;
 
-    public int ProvinceID;
     @ManyToOne
-    @JoinColumn(foreignKey = @ForeignKey(name = "ProvinceID"))
     public Province Province;
 
-    public int SeasonID;
     @ManyToOne
-    @JoinColumn(foreignKey = @ForeignKey(name = "SeasonID"))
     public Season Season;
 
     @OneToMany(mappedBy = "School")

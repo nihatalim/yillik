@@ -13,11 +13,10 @@ import java.util.Collection;
 @NoArgsConstructor
 public class Season extends BaseModel{
 
+    @Column(nullable = false)
     public String Name;
 
-    public int StudioID;
     @ManyToOne
-    @JoinColumn(foreignKey = @ForeignKey(name = "StudioID"))
     public Studio Studio;
 
     @OneToMany(mappedBy = "Season")

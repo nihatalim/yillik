@@ -3,11 +3,12 @@ package tr.com.nihatalim.yillik.web.models;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
 
 @Entity
 @Table(name = "province")
@@ -15,9 +16,10 @@ import java.util.List;
 @NoArgsConstructor
 public class Province extends BaseModel{
 
+    @Column(nullable = false)
     private String Name;
 
-    @OneToMany()
-    private List<School> Schools = new ArrayList<>();
+    @OneToMany(mappedBy = "Province")
+    private Collection<School> Schools = new ArrayList<>();
 
 }

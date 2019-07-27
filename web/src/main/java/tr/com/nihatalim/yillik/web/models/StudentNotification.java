@@ -11,14 +11,10 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class StudentNotification extends BaseModel{
 
-    private int StudentID;
     @ManyToOne
-    @JoinColumn(foreignKey = @ForeignKey(name = "StudentID"))
     private Student Student;
 
-    private int NotificationID;
     @ManyToOne
-    @JoinColumn(foreignKey = @ForeignKey(name = "NotificationID"))
     private Notification Notification;
 
 }
