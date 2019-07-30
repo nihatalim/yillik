@@ -1,16 +1,11 @@
 package tr.com.nihatalim.yillik.web.models;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
 
 @Entity
 @Table(name = "season")
-@Data
-@NoArgsConstructor
 public class Season extends BaseModel{
 
     @Column(nullable = false)

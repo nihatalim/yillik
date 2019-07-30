@@ -1,16 +1,11 @@
 package tr.com.nihatalim.yillik.web.models;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
 
 @Entity
 @Table(name = "student")
-@Data
-@NoArgsConstructor
 public class Student extends BaseModel{
 
     @Column(nullable = false)
@@ -20,7 +15,7 @@ public class Student extends BaseModel{
     private boolean IsAccepted;
 
     @Column(nullable = false)
-    private BaseModel.Gender Gender;
+    private Enums.Gender Gender;
 
     @ManyToOne
     private User User;

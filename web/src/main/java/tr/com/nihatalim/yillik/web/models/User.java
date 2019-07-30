@@ -1,16 +1,10 @@
 package tr.com.nihatalim.yillik.web.models;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Collection;
+import java.util.List;
 
 @Entity
 @Table(name = "user")
-@Data
-@NoArgsConstructor
 public class User extends BaseModel{
 
     @Column(nullable = false)
@@ -20,15 +14,64 @@ public class User extends BaseModel{
     private String Password;
 
     @Column(nullable = false)
-    private BaseModel.Role Role;
+    private Enums.Role Role;
 
     @OneToMany(mappedBy = "User")
-    private Collection<Admin> Admins = new ArrayList<>();
+    private List<Admin> Admins;
 
     @OneToMany(mappedBy = "User")
-    private Collection<Student> Students = new ArrayList<>();
+    private List<Student> Students;
 
     @OneToMany(mappedBy = "User")
-    private Collection<Studio> Studios = new ArrayList<>();
+    private List<Studio> Studios;
 
+    public User(){}
+
+    public String getMail() {
+        return Mail;
+    }
+
+    public void setMail(String mail) {
+        Mail = mail;
+    }
+
+    public String getPassword() {
+        return Password;
+    }
+
+    public void setPassword(String password) {
+        Password = password;
+    }
+
+    public Enums.Role getRole() {
+        return Role;
+    }
+
+    public void setRole(Enums.Role role) {
+        Role = role;
+    }
+
+    public List<Admin> getAdmins() {
+        return Admins;
+    }
+
+    public void setAdmins(List<Admin> admins) {
+        Admins = admins;
+    }
+
+    public List<Student> getStudents() {
+        return Students;
+    }
+
+    public void setStudents(List<Student> students) {
+        Students = students;
+    }
+
+    public List<Studio> getStudios() {
+        return Studios;
+    }
+
+    public void setStudios(List<Studio> studios) {
+        Studios = studios;
+    }
 }

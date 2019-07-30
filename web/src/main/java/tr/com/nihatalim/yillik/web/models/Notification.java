@@ -1,8 +1,5 @@
 package tr.com.nihatalim.yillik.web.models;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -10,8 +7,6 @@ import java.util.Date;
 
 @Entity
 @Table(name = "notification")
-@Data
-@NoArgsConstructor
 public class Notification extends BaseModel{
 
     @Column(nullable = false)

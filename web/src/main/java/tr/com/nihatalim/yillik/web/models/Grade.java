@@ -1,16 +1,11 @@
 package tr.com.nihatalim.yillik.web.models;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
 
 @Entity
 @Table(name = "grade")
-@Data
-@NoArgsConstructor
 public class Grade extends BaseModel{
 
     @Column(nullable = false)
