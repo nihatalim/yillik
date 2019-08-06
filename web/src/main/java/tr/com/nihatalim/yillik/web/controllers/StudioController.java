@@ -8,12 +8,13 @@ import tr.com.nihatalim.yilliik.dto.responses.studio.CreateStudioResponse;
 import tr.com.nihatalim.yilliik.dto.responses.studio.GetAllStudiosResponse;
 import tr.com.nihatalim.yillik.web.repositories.IStudioRepository;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
 @RestController
-@RequestMapping(value = "/api/studio")
+@RequestMapping(value = "/api/studio", produces = "application/json")
 public class StudioController {
     private final IStudioRepository repository;
 
@@ -21,7 +22,7 @@ public class StudioController {
         this.repository = repository;
     }
 
-    @PostMapping(value = "CreateStudio", produces = "application/json")
+    @PostMapping(value = "CreateStudio")
     public CompletableFuture<CreateStudioResponse> CreateStudio(@RequestBody CreateStudioRequest request){
         return this.repository.CreateStudio(request);
     }

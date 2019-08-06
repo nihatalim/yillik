@@ -16,6 +16,9 @@ public class User extends BaseModel{
     @Column(nullable = false)
     private Enums.Role Role;
 
+    @Column(nullable = true)
+    private String Token;
+
     @OneToMany(mappedBy = "User")
     private List<Admin> Admins;
 
